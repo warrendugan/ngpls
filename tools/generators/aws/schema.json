@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "aws",
+  "description": "Static, Angular, AWS static application CLI",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Application name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "accessKeyId": {
+      "type": "string",
+      "description": "The accessKeyId from AWS.",
+      "x-deprecated": "Use \"the environment variables\" instead."
+    },
+    "secretAccessKey": {
+      "type": "string",
+      "description": "The secret access key from AWS.",
+      "x-deprecated": "Use \"the environment variables\" instead."
+    },
+    "region": {
+      "type": "string",
+      "description": "Region for deployment.",
+      "x-deprecated": "Use \"the environment variables\" instead."
+    },
+    "bucket": {
+      "type": "string",
+      "description": "AWS bucket to be used.",
+      "x-deprecated": "Use \"the environment variables\" instead."
+    },
+    "distributionId": {
+      "type": "string",
+      "description": "AWS Cloudfront Distrubution ID"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
